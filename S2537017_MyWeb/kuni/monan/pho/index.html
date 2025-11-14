@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ベトナムのフォー紹介</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ベトナムのフォー紹介</h1>
+    <h2>牛肉フォー・鶏肉フォー・豚肉フォー・ナムディンフォー</h2>
+  </header>
+
+  <main>
+    <div class="container">
+      <a href="pho-bo.html" class="pho-button" 
+         onmouseover="showPho('images/pho-bo.jpg')" 
+         onmouseout="hidePho()">フォー・ボー（牛肉フォー）</a>
+
+      <a href="pho-ga.html" class="pho-button" 
+         onmouseover="showPho('images/pho-ga.jpg')" 
+         onmouseout="hidePho()">フォー・ガー（鶏肉フォー）</a>
+
+      <a href="pho-heo.html" class="pho-button" 
+         onmouseover="showPho('images/pho-heo.jpg')" 
+         onmouseout="hidePho()">フォー・ヘオ（豚肉フォー）</a>
+
+      <a href="pho-namdinh.html" class="pho-button" 
+         onmouseover="showPho('images/pho-namdinh.jpg')" 
+         onmouseout="hidePho()">ナムディンフォー</a>
+    </div>
+
+    <!-- Khu vực hiển thị ảnh phở -->
+    <div id="pho-preview">
+      <img id="preview-img" src="" alt="フォー画像">
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ベトナムフォー紹介</p>
+  </footer>
+
+  <script>
+    const img = document.getElementById("preview-img");
+
+    function showPho(imgSrc) {
+      img.src = imgSrc;
+      img.style.opacity = "1";
+      img.style.transform = "scale(1)";
+    }
+
+    function hidePho() {
+      img.style.opacity = "0";
+      img.style.transform = "scale(0.95)";
+    }
+  </script>
+</body>
+</html>
